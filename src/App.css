@@ -1,0 +1,13 @@
+table img{
+    max-width: 100%;
+    height: 100px;
+}
+.home-page{
+  margin: auto 5%; ;
+}
+.form-inline{
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
