@@ -10,6 +10,7 @@ table img{
   flex-direction: row;
   gap: 10px;
 
+<<<<<<< HEAD
 }
 .pagination a{
   text-decoration: none;
@@ -39,3 +40,6 @@ table img{
   background-color: #5AB1BB;
 }
                                                                       
+=======
+}
+>>>>>>> 47a460139db0498be73235930a86a1d3e707e2fe
