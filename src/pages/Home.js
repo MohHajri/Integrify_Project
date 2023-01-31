@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
-<<<<<<< HEAD
 import Pagination from '../components/Pagination';
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
-=======
-
-const Home = () => {
-  const [countries, setCountries] = useState([]);
-  const [loading, setLoading] = useState(true);
->>>>>>> 47a460139db0498be73235930a86a1d3e707e2fe
   
 
     useEffect(() => {
@@ -51,11 +44,7 @@ const Home = () => {
     };
 
     fetchData();
-<<<<<<< HEAD
     }, []);
-=======
-  }, []);
->>>>>>> 47a460139db0498be73235930a86a1d3e707e2fe
 
   return (
     <div className="home-page">
@@ -63,39 +52,10 @@ const Home = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-<<<<<<< HEAD
           <Pagination data={countries} />
           )}
   </div>
 );
 }
-=======
-        <table className="table">
-          <thead className="thead-dark">
-            <tr>
-              <th>Flag</th>
-              <th>Name</th>
-              <th>Capital</th>
-              <th>Population</th>
-            </tr>
-          </thead>
-          <tbody>
-            {countries.map(country => (
-              <tr key={country.name}>
-                <td>
-                  <img src={country.flag} alt={country.name} />
-                </td>
-                <td>{country.name}</td>
-                <td>{country.capital}</td>
-                <td>{country.population}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
-  );
-};
->>>>>>> 47a460139db0498be73235930a86a1d3e707e2fe
 
 export default Home;

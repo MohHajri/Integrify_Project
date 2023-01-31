@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "react_integrify",
   "version": "0.1.0",
   "private": true,
@@ -39,9 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-=======
-  "dependencies": {
-    "react-paginate": "^8.1.4"
->>>>>>> 47a460139db0498be73235930a86a1d3e707e2fe
   }
 }
