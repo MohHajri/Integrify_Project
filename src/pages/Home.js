@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar';
 import Pagination from '../components/Pagination';
 
 const Home = () => {
-  const [countries, setCountries] = useState([]);
+    const [countries, setCountries] = useState([]);
+     const [filteredCountries, setFilteredCountries] = useState([]);
     const [loading, setLoading] = useState(true);
-  
 
     useEffect(() => {
     const fetchData = async () => {
@@ -37,6 +37,7 @@ const Home = () => {
         });
 
         setCountries(newData);
+        setFilteredCountries(newData);
         setLoading(false);
       } catch (err) {
         console.error(err);
@@ -46,13 +47,20 @@ const Home = () => {
     fetchData();
     }, []);
 
+     const handleSearch = (searchTerm) => {
+        const filteredData = countries.filter((country) =>
+            country.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredCountries(filteredData);
+    };
+
   return (
     <div className="home-page">
-      <Navbar />
+          <Navbar onSearch={handleSearch} />
       {loading ? (
         <div>Loading...</div>
       ) : (
-          <Pagination data={countries} />
+          <Pagination data={countries} filteredCountries={filteredCountries} />
           )}
   </div>
 );

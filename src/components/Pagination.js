@@ -3,20 +3,20 @@ import { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate'
 
 function Pagination( props) {
-    const { data } = props;
+    const { data, filteredCountries } = props;
     const [currentPosts, setCurrentPosts] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
     const [pageCount, setPageCount] = useState(0);
-     const postsPerPage = 10;
-
+    const postsPerPage = 5;
+    
     useEffect(() => {
         const endOffset = itemOffset + postsPerPage;
-        setCurrentPosts(data.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(data.length / postsPerPage));
-    }, [data, itemOffset, postsPerPage]);
+        setCurrentPosts(filteredCountries.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(filteredCountries.length / postsPerPage));
+    }, [filteredCountries, itemOffset, postsPerPage]);
 
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * postsPerPage) % data.length;
+        const newOffset = (event.selected * postsPerPage) % filteredCountries.length;
         setItemOffset(newOffset);
     }
   return (
