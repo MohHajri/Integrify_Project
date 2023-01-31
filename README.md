@@ -7,7 +7,8 @@
 ## some snippets from the project:
 
 <br>
-![snippet1](https://user-images.githubusercontent.com/89851240/215888504-bc8d35aa-6b9f-447d-92d9-bedaca1ba793.png)
+
+![snippet1](https://user-images.githubusercontent.com/89851240/215888782-003a1a73-8606-4152-9a90-74485ebb883d.png)
 
 
 ![snippet2](https://user-images.githubusercontent.com/89851240/215888594-0176d084-049a-4b35-b7d7-a95233126ac0.png)
